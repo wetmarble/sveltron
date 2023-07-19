@@ -1,0 +1,24 @@
+{
+  "name": "sveltron",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./electron.cjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "electron:start": "electron . --no-dsandbox",
+    "app-run": "concurrently 'npm run dev' 'sleep 1 && npm run electron:start'"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^2.4.2",
+    "svelte": "^4.0.3",
+    "vite": "^4.4.0"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.0",
+    "electron": "^25.3.0",
+    "electron-packager": "^17.1.1"
+  }
+}
